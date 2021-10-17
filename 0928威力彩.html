@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const rand = () => {
+      return Math.ceil(Math.random() * 38)
+    }
+    const luckynum = (Math.ceil(Math.random() * 8))
+    const group = []
+    for (let i = 0; i < 6; i++) {
+      const num = rand()
+      if (group.includes(num)) {
+        i--
+      } else {
+        group.push(num)
+      }
+    } document.write(`${group} 幸運號碼${luckynum}`)
+  </script>
+</body>
+
+</html>
